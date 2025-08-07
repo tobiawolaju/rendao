@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --nouns-black: 0 0% 0%;
+    --nouns-white: 0 0% 100%;
+    --nouns-red: 0 100% 50%;
+    --nouns-blue: 240 100% 50%;
+    --nouns-yellow: 60 100% 50%;
+    --nouns-purple: 270 100% 50%;
+  }
+ 
+  .dark {
+    --nouns-black: 0 0% 70%;
+    --nouns-white: 0 0% 5%;
+    --nouns-red: 0 100% 50%;
+    --nouns-blue: 240 100% 50%;
+    --nouns-yellow: 60 100% 50%;
+    --nouns-purple: 270 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-nouns-black;
+  }
+  body {
+    @apply bg-nouns-white text-nouns-black;
+  }
+}
