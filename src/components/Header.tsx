@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ThemeToggle } from './ThemeToggle';
 import { Menu, X } from 'lucide-react';
+import { WalletConnect } from './WalletConnect';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +29,7 @@ export const Header = () => {
               {link.label}
             </Link>
           ))}
+          <WalletConnect />
           <ThemeToggle />
         </nav>
 
@@ -48,7 +50,10 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <ThemeToggle />
+            <div className="flex items-center space-x-4">
+              <WalletConnect />
+              <ThemeToggle />
+            </div>
           </nav>
         </div>
       )}

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ProposalCard } from '@/components/ProposalCard';
 import { codigo, Proposal } from '@/lib/codigo';
+import { WalletConnect } from '@/components/WalletConnect';
 
 type ProposalStatus = 'All' | 'Pending' | 'Approved' | 'Closed';
 
@@ -29,6 +30,9 @@ export default function DashboardPage() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-4xl font-extrabold text-center my-8 uppercase">DAO Dashboard</h1>
+      <div className="flex justify-center mb-8">
+        <WalletConnect />
+      </div>
       <div className="flex justify-center space-x-4 mb-8">
         <button
           onClick={() => setFilter('All')}
