@@ -8,7 +8,7 @@ type TestimonialProps = {
 
 export const TestimonialCard = ({ quote, author, imageUrl }: TestimonialProps) => {
   return (
-    <div className="border-4 border-nouns-black shadow-nouns p-6 bg-nouns-white text-nouns-black text-center rounded-xl">
+    <div className="border-4 border-nouns-black shadow-nouns p-6 bg-nouns-white text-nouns-black text-center">
       <Image
         src={imageUrl}
         alt={author}
