@@ -3,7 +3,7 @@ import { codigo, Proposal } from '@/lib/codigo';
 
 async function getCompletedProposals() {
   const proposals = await codigo.getProposals();
-  return proposals.filter((p) => p.status === 'Closed');
+  return proposals.filter((p) => p.status === 'Approved');
 }
 
 export default async function BenefactorsPage() {
