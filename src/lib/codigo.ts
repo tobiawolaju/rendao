@@ -29,21 +29,19 @@ const mockWallet: Wallet = {
   reputation: 85,
 };
 
-let mockProposals: Proposal[] = [
-  {
-    id: '1',
-    victimName: 'John Doe',
-    hospitalEmail: 'billing@stjude.org',
-    hospitalWallet: '0x0987654321098765432109876543210987654321',
-    amount: 5000,
-    documents: ['Qm...1', 'Qm...2'],
-    sponsor: '0x1234567890123456789012345678901234567890',
-    votesFor: 15,
-    votesAgainst: 2,
-    verifiedByDoctor: true,
-    status: 'Pending',
-  },
-];
+import proposalsData from './proposals.json';
+
+let mockProposals: Proposal[] = proposalsData.map(p => ({
+  ...p,
+  id: p.id.toString(),
+  victimName: p.name, // Map 'name' from JSON to 'victimName'
+  hospitalEmail: 'N/A', // Placeholder, as it's not in JSON
+  hospitalWallet: 'N/A', // Placeholder
+  documents: [], // Placeholder
+  votesFor: 0, // Placeholder
+  votesAgainst: 0, // Placeholder
+  verifiedByDoctor: false, // Placeholder
+}));
 
 export const codigo = {
   connectWallet: async (): Promise<Wallet> => {

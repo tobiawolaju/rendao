@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "status": "Pending",
+    "amount": 5000,
+    "sponsor": "0x1234567890123456789012345678901234567890",
+    "testimonials": []
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "status": "Active",
+    "amount": 10000,
+    "sponsor": "0x0987654321098765432109876543210987654321",
+    "testimonials": [
+      { "author": "Alice", "comment": "Great cause!" },
+      { "author": "Bob", "comment": "Happy to support." }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Project Heal",
+    "status": "Closed",
+    "amount": 7500,
+    "sponsor": "0x1122334455667788990011223344556677889900",
+    "testimonials": []
+  },
+  {
+    "id": 4,
+    "name": "Community Garden",
+    "status": "Active",
+    "amount": 2500,
+    "sponsor": "0x2233445566778899001122334455667788990011",
+    "testimonials": [
+      { "author": "Charlie", "comment": "Looking forward to this." }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Tech for All",
+    "status": "Pending",
+    "amount": 15000,
+    "sponsor": "0x3344556677889900112233445566778899001122",
+    "testimonials": []
+  },
+  {
+    "id": 6,
+    "name": "Animal Shelter",
+    "status": "Active",
+    "amount": 8000,
+    "sponsor": "0x4455667788990011223344556677889900112233",
+    "testimonials": [
+      { "author": "David", "comment": "For the furry friends!" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Clean Water Initiative",
+    "status": "Closed",
+    "amount": 20000,
+    "sponsor": "0x5566778899001122334455667788990011223344",
+    "testimonials": []
+  },
+  {
+    "id": 8,
+    "name": "Art Workshop",
+    "status": "Active",
+    "amount": 3000,
+    "sponsor": "0x6677889900112233445566778899001122334455",
+    "testimonials": []
+  },
+  {
+    "id": 9,
+    "name": "Scholarship Fund",
+    "status": "Pending",
+    "amount": 50000,
+    "sponsor": "0x7788990011223344556677889900112233445566",
+    "testimonials": []
+  },
+  {
+    "id": 10,
+    "name": "Disaster Relief",
+    "status": "Active",
+    "amount": 100000,
+    "sponsor": "0x8899001122334455667788990011223344556677",
+    "testimonials": [
+      { "author": "Eve", "comment": "Important work." },
+      { "author": "Frank", "comment": "Happy to contribute." }
+    ]
+  }
+]
