@@ -20,7 +20,7 @@ export interface Proposal {
   votesFor: number;
   votesAgainst: number;
   verifiedByDoctor: boolean;
-  status: 'Pending' | 'Approved' | 'Rejected' | 'Executed';
+  status: 'Pending' | 'Active' | 'Closed' | 'Approved' | 'Rejected';
 }
 
 const mockWallet: Wallet = {
@@ -31,16 +31,27 @@ const mockWallet: Wallet = {
 
 import proposalsData from './proposals.json';
 
-let mockProposals: Proposal[] = proposalsData.map(p => ({
-  ...p,
+interface RawProposalData {
+  id: number;
+  name: string;
+  status: string;
+  amount: number;
+  sponsor: string;
+  testimonials: Array<{ author: string; comment: string }>;
+}
+
+let mockProposals: Proposal[] = (proposalsData as RawProposalData[]).map(p => ({
   id: p.id.toString(),
-  victimName: p.name, // Map 'name' from JSON to 'victimName'
-  hospitalEmail: 'N/A', // Placeholder, as it's not in JSON
-  hospitalWallet: 'N/A', // Placeholder
-  documents: [], // Placeholder
-  votesFor: 0, // Placeholder
-  votesAgainst: 0, // Placeholder
-  verifiedByDoctor: false, // Placeholder
+  victimName: p.name,
+  hospitalEmail: 'N/A',
+  hospitalWallet: 'N/A',
+  amount: p.amount,
+  documents: [],
+  sponsor: p.sponsor,
+  votesFor: 0,
+  votesAgainst: 0,
+  verifiedByDoctor: false,
+  status: p.status as Proposal['status'],
 }));
 
 export const codigo = {
@@ -101,7 +112,7 @@ export const codigo = {
     console.log(`Executing proposal ${proposalId}`);
     const proposal = mockProposals.find((p) => p.id === proposalId);
     if (proposal) {
-      proposal.status = 'Executed';
+      proposal.status = 'Closed';
       return new Promise((resolve) => setTimeout(() => resolve(proposal), 500));
     }
     throw new Error('Proposal not found');
