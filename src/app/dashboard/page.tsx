@@ -32,8 +32,8 @@ export default function DashboardPage() {
       <div className="flex justify-center space-x-4 mb-8">
         <button
           onClick={() => setFilter('All')}
-          className={`px-6 py-3 rounded-lg font-semibold ${
-            filter === 'All' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-800'
+          className={`px-6 py-3 rounded-lg font-semibold transition-colors duration-200 border-2 border-nouns-black ${
+            filter === 'All' ? 'bg-nouns-black text-nouns-white shadow-nouns-sm' : 'bg-nouns-white text-nouns-black hover:bg-nouns-black hover:text-nouns-white'
           }`}
         >
           All
@@ -59,7 +59,6 @@ export default function DashboardPage() {
           className={`px-6 py-3 rounded-lg font-semibold transition-colors duration-200 border-2 border-nouns-black ${
             filter === 'Closed' ? 'bg-nouns-black text-nouns-white shadow-nouns-sm' : 'bg-nouns-white text-nouns-black hover:bg-nouns-black hover:text-nouns-white'
           }`}
-        >
         >
           Closed
         </button>
