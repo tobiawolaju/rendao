@@ -16,18 +16,17 @@ export const WalletConnect = () => {
   };
 
   return (
-    <div className="p-4 border-4 border-nouns-black shadow-nouns bg-nouns-white text-nouns-black">
+    <div className="relative inline-block">
       {wallet ? (
-        <div>
-          <p className="font-bold text-lg">Connected Wallet:</p>
-          <p className="text-sm font-mono">{wallet.ens || wallet.address}</p>
-          <p className="text-sm font-bold text-nouns-red">Reputation: {wallet.reputation}</p>
+        <div className="flex items-center space-x-2 border-2 border-nouns-black bg-nouns-white text-nouns-black px-2 py-1 shadow-nouns-sm">
+          <p className="font-bold text-xs">{wallet.ens || wallet.address.slice(0, 6) + '...' + wallet.address.slice(-4)}</p>
+          <span className="text-xs font-bold text-nouns-red">Rep: {wallet.reputation}</span>
         </div>
       ) : (
         <button 
           onClick={handleConnect} 
           disabled={loading}
-          className="w-full py-3 px-4 bg-nouns-blue text-nouns-white font-bold text-lg border-2 border-nouns-black shadow-nouns-sm hover:bg-nouns-white hover:text-nouns-black dark:hover:bg-nouns-black dark:hover:text-nouns-white transition-colors duration-200"
+          className="py-2 px-4 bg-nouns-blue text-nouns-white font-bold text-sm border-2 border-nouns-black shadow-nouns-sm hover:bg-nouns-white hover:text-nouns-black dark:hover:bg-nouns-black dark:hover:text-nouns-white transition-colors duration-200"
         >
           {loading ? 'Connecting...' : 'Connect Wallet'}
         </button>
