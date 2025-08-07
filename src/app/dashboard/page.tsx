@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { ProposalCard } from '@/components/ProposalCard';
 import { codigo, Proposal } from '@/lib/codigo';
 
-type ProposalStatus = 'All' | 'Pending' | 'Active' | 'Closed';
+type ProposalStatus = 'All' | 'Pending' | 'Approved' | 'Closed';
 
 export default function DashboardPage() {
   const [proposals, setProposals] = useState<Proposal[]>([]);
@@ -47,12 +47,12 @@ export default function DashboardPage() {
           Pending
         </button>
         <button
-          onClick={() => setFilter('Active')}
+          onClick={() => setFilter('Approved')}
           className={`px-6 py-3 rounded-lg font-semibold transition-colors duration-200 border-2 border-nouns-black ${
-            filter === 'Active' ? 'bg-nouns-black text-nouns-white shadow-nouns-sm' : 'bg-nouns-white text-nouns-black hover:bg-nouns-black hover:text-nouns-white'
+            filter === 'Approved' ? 'bg-nouns-black text-nouns-white shadow-nouns-sm' : 'bg-nouns-white text-nouns-black hover:bg-nouns-black hover:text-nouns-white'
           }`}
         >
-          Active
+          Approved
         </button>
         <button
           onClick={() => setFilter('Closed')}

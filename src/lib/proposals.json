@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Jane Smith",
-    "status": "Active",
+    "status": "Approved",
     "amount": 10000,
     "sponsor": "0x0987654321098765432109876543210987654321",
     "testimonials": [
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Community Garden",
-    "status": "Active",
+    "status": "Approved",
     "amount": 2500,
     "sponsor": "0x2233445566778899001122334455667788990011",
     "testimonials": [
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Animal Shelter",
-    "status": "Active",
+    "status": "Approved",
     "amount": 8000,
     "sponsor": "0x4455667788990011223344556677889900112233",
     "testimonials": [
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "name": "Art Workshop",
-    "status": "Active",
+    "status": "Approved",
     "amount": 3000,
     "sponsor": "0x6677889900112233445566778899001122334455",
     "testimonials": []
@@ -81,7 +81,7 @@
   {
     "id": 10,
     "name": "Disaster Relief",
-    "status": "Active",
+    "status": "Approved",
     "amount": 100000,
     "sponsor": "0x8899001122334455667788990011223344556677",
     "testimonials": [

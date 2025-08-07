@@ -23,12 +23,12 @@ export default async function LandingPage() {
           Sponsor a Surgery
         </Link>
         <Link href="/dashboard" className="py-3 px-6 bg-nouns-purple text-nouns-white font-bold text-lg md:text-xl border-4 border-nouns-black shadow-nouns hover:bg-nouns-white hover:text-nouns-black dark:hover:bg-nouns-black dark:hover:text-nouns-white transition-colors duration-200 text-center">
-          Browse Active Cases
+          Browse Approved Cases
         </Link>
       </div>
 
       <section className="my-20">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8">Active Cases</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8">Approved Cases</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {proposals.map((p) => (
             <ProposalCard key={p.id} proposal={p} />
